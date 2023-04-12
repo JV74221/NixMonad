@@ -1,0 +1,58 @@
+# Make Ctrl+Right and Ctrl+Delete stop at word ends instead of beginnings.
+set afterends
+
+# Automatically indent a newly created line.
+set autoindent
+
+# For the interface, use bold instead of reverse video.
+set boldtext
+
+# Display line numbers to the left of the text area.
+set linenumbers
+
+# Constantly display the cursor position on the status bar.
+set constantshow
+
+# Display a "scrollbar" on the righthand side of the edit window.
+set indicator
+
+# Suppress the title bar and instead show information in the space for the status bar.
+set minibar
+
+# Display line plus column numbers and the character code in the minibar.
+set constantshow
+
+# Use the minibar's right side for showing some state flags.
+# I when auto-indenting,
+# M when the mark is on,
+# L when hard-wrapping (breaking long lines),
+# R when recording a macro,
+# and S when soft-wrapping.
+set stateflags
+
+# Enable mouse support.
+# set mouse
+
+# Don’t display the help lists at the bottom of the screen.
+set nohelp
+
+# Display lines that exceed the screen’s width over multiple screen lines.
+set softwrap
+
+# When soft line wrapping is enabled, make it wrap lines at blank characters.
+set atblanks
+
+# Use the given program to do spell checking and correcting.
+set speller "hunspell"
+
+# Use a tab size of n number columns.
+set tabsize 2
+
+# Convert each typed tab to spaces.
+set tabstospaces
+
+# Remove trailing whitespace.
+set trimblanks
+
+# Let an unmodified Backspace or Delete erase the marked region.
+set zap

@@ -1,0 +1,63 @@
+Config {
+  ------------------------------------------------------------------------------
+  -- Appearance
+  ------------------------------------------------------------------------------
+
+  font = "xft:Inter:size=10:bold:antialias=true:hinting=true",
+  bgColor = "#1c1c1c",
+  fgColor = "#d0d0d0",
+  border = BottomB,
+  borderColor = "#d0d0d0",
+  borderWidth = 1,
+
+  ------------------------------------------------------------------------------
+  -- Layout
+  ------------------------------------------------------------------------------
+
+  template = "%XMonadLog% } %date% { %alsa:default:Master%",
+
+  ------------------------------------------------------------------------------
+  -- Plugins
+  ------------------------------------------------------------------------------
+
+  commands = [
+    -- Logging
+    Run XMonadLog,
+
+    -- Date Monitors
+    -- Alias: %date%
+    Run Date "%a %Y-%m-%d <fc=#afd700>%I:%M %p</fc>" "date" 10,
+
+    -- Volume Monitors
+    -- Alias: %alsa:default:Master%
+    Run Alsa "default" "Master"
+      [
+        "-t", "Vol <volume>% <status>", "--",
+        "-C", "#afd700"
+      ]
+
+    -- Extra Plugins -----------------------------------------------------------
+
+    -- Cpu Monitors
+    -- Alias: %cpu%
+    -- Run Cpu ["-t", "Cpu <total>%"] 10,
+
+    -- Disk Monitors
+    -- Alias: %disku%
+    -- Run DiskU [("/", "Space <used>/<size>")] [] 10,
+
+    -- Memory Monitors
+    -- Alias: %memory%
+    -- Run Memory ["-t", "Mem <used>M/<total>M"] 10,
+
+    -- Network Monitors
+    -- Alias: %dynnetwork%
+    -- Run DynNetwork ["-t", "Net <rx>, <tx>", "-S", "True"] 10,
+
+    -- Swap Monitors
+    -- Alias: %swap%
+    -- Run Swap ["-t", "Swap <used>M/<total>M"] 10
+
+    ----------------------------------------------------------------------------
+  ]
+}
